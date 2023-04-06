@@ -30,7 +30,7 @@ public class TestController2 {
     @Autowired
     private TestService testService;
 
-    @RequestMapping("/test")
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
     @ResponseBody
     public String ffs() {
 
