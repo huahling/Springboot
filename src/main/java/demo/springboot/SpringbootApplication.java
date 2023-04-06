@@ -14,12 +14,14 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 //import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 //import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 //@EnableJpaRepositories
-@SpringBootApplication//默认扫单前包 同一个包
+@EnableAutoConfiguration
+//@SpringBootApplication//默认扫单前包 同一个包
 @ComponentScan(basePackages = {"demo.springboot", "demo.feng"})//"demo.feng",demo.shujuyuan
 @MapperScan(basePackages = "demo.feng") //mybatis  //"demo.feng",
 //@EntityScan("demo.jpajta")

@@ -20,8 +20,14 @@
 
 spring:
 
-  main:
-    allow-bean-definition-overriding: true
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+#  main:
+#    allow-bean-definition-overriding: true
 
   #  jpa:
   #    show-sql: true
@@ -46,6 +52,7 @@ spring:
     url: jdbc:mysql://192.168.31.141:3306/test?useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
 #        driver-class-name: com.mysql.cj.jdbc.Driver
 
 #    test1:
@@ -59,9 +66,9 @@ spring:
 #      password: 123456
 
 
-logging:
-  level:
-    demo.shujuyuan.Test1.dao: debug
+#logging:
+#  level:
+#    demo.shujuyuan.Test1.dao: debug
 
   #      driverClassName: com.mysql.cj.jdbc.Driver
   #  servlet:
@@ -89,28 +96,32 @@ logging:
   #            auto: update
   #          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
-  mvc:
-    hiddenmethod:
-      filter:
-        enabled: true
+
 
 
 
   #自定义变量
 
-  freemarker:
-    # 后缀名 freemarker 默认后缀为 .ftl ，当然你也可以改成自己习惯的 .html
-    suffix: .ftlh
-    charset: UTF-8
-    content-type: text/html
-    allow-request-override: true
-    allow-session-override: true
-    expose-request-attributes: true
-    expose-session-attributes: true
-    expose-spring-macro-helpers: true
-    prefer-file-system-access: false
-    # 设定模板的加载路径
-    template-loader-path: classpath:/templates
+
+
+
+#  freemarker:
+#    # 后缀名 freemarker 默认后缀为 .ftl ，当然你也可以改成自己习惯的 .html
+#    suffix: .ftlh
+#    charset: UTF-8
+#    content-type: text/html
+#    allow-request-override: true
+#    allow-session-override: true
+#    expose-request-attributes: true
+#    expose-session-attributes: true
+#    expose-spring-macro-helpers: true
+#    prefer-file-system-access: false
+#    # 设定模板的加载路径
+#    template-loader-path: classpath:/templates
+
+
+
+
 
 #spring:
 #  mvc:
