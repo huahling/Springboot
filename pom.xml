@@ -256,8 +256,6 @@
                 <filtering>false</filtering>
             </resource>
 
-
-
             <resource>
                 <directory>src/main/webapp</directory>
                 <targetPath>resources</targetPath>
