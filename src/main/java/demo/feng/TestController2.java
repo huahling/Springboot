@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -28,6 +29,15 @@ public class TestController2 {
 
     @Autowired
     private TestService testService;
+
+    @RequestMapping("/test")
+    @ResponseBody
+    public String ffs() {
+
+
+        return "返回页面";
+    }
+
 
     @RequestMapping("/cc2")
 //    @ResponseBody
