@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>demo</groupId>
+    <artifactId>Springboot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+<!--    <packaging>war</packaging>-->
+    <packaging>jar</packaging>
+    <name>Springboot</name>
+    <description>Springboot</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <!--        <tomcat.version>9.0.65</tomcat.version>-->
+    </properties>
+    <dependencies>
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-web</artifactId>-->
+        <!--        </dependency>-->
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+        <!--用黑窗口运行war 项目 需要去除 tomcat 依赖-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-freemarker</artifactId>-->
+        <!--        </dependency>-->
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-cache</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>javax.servlet</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>jstl</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>provided</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>javax.servlet</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>javax.servlet-api</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>provided</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>spring-boot-devtools</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <optional>true</optional>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>true</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;        &lt;!&ndash; servlet 依赖. &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>javax.servlet</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>javax.servlet-api</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>provided</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>javax.servlet</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>jstl</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-jta-atomikos</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter</artifactId>-->
+        <!--            &lt;!&ndash; 排除自带的日志依赖 &ndash;&gt;-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>org.springframework.boot</groupId>-->
+        <!--                    <artifactId>spring-boot-starter-logging</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <!--        &lt;!&ndash; 引入log4j2依赖 &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-log4j2</artifactId>-->
+        <!--        </dependency>-->
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-aop</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.projectlombok</groupId>-->
+        <!--            <artifactId>lombok</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-test</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>junit</groupId>-->
+        <!--            <artifactId>junit</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.testng</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>testng</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <version>7.6.1</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>junit</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>junit</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <version>4.12</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.testng</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>testng</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <version>6.14.3</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>compile</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+        <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.testng</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>testng</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <version>RELEASE</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <scope>compile</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
+        <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.projectlombok</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>lombok</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>spring-boot-test</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <groupId>junit</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;            <artifactId>junit</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.3</version>
+            </plugin>
+        </plugins>
+
+        <resources>
+
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+
+
+            <!--                    <resource>-->
+            <!--                        <directory>src/main/java</directory>-->
+            <!--                        <includes>-->
+            <!--                            <include>**/*.xml</include>-->
+            <!--                        </includes>-->
+            <!--                    </resource>-->
+        </resources>
+    </build>
+
+
+</project>
