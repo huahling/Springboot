@@ -256,13 +256,13 @@
                 <filtering>false</filtering>
             </resource>
 
-            <resource>
-                <directory>src/main/webapp</directory>
-                <targetPath>resources</targetPath>
-                <includes>
-                    <include>**/**</include>
-                </includes>
-            </resource>
+<!--            <resource>-->
+<!--                <directory>src/main/webapp</directory>-->
+<!--                <targetPath>resources</targetPath>-->
+<!--                <includes>-->
+<!--                    <include>**/**</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
         </resources>
     </build>
 
